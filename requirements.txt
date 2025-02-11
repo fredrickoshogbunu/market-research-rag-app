@@ -1,0 +1,9 @@
+# backend/requirements.txt
+fastapi==0.95.0
+uvicorn==0.20.0
+faiss-cpu==1.7.3
+sentence-transformers==2.2.2
+transformers==4.30.0
+torch>=1.13.0
+google-api-python-client  # Added Google API client library
+pypdf2 # Added PyPDF2 library for PDF processing
