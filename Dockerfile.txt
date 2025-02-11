@@ -1,0 +1,27 @@
+# Use an official Python slim image as a base
+FROM python:3.9-slim
+
+# Install system dependencies including SWIG and build tools
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      build-essential \
+      swig \
+      && rm -rf /var/lib/apt/lists/*
+
+# Set the working directory
+WORKDIR /app
+
+# Copy requirements first (to leverage Docker cache)
+COPY requirements.txt ./
+
+# Install Python dependencies
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Copy the rest of the application code
+COPY . .
+
+# (Optional) Expose port if your app serves web requests
+EXPOSE 8000
+
+# Define the command to run your app (adjust as needed)
+CMD ["python", "main.py"]
