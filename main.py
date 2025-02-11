@@ -33,7 +33,7 @@ app = FastAPI(title="Market Research RAG System")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Update this with your frontend URL
+    allow_origins=["http://localhost:3000"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -273,6 +273,6 @@ def download_report(report_id: str):
         raise HTTPException(status_code=404, detail="Report not found")
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+#if __name__ == "__main__":
+    #uvicorn.run(app, host="0.0.0.0", port=8000)
 
