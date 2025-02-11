@@ -1,0 +1,65 @@
+/* frontend/src/App.css */
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.loading {
+  color: #555;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.source {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.source:hover {
+  background-color: #f0f0f0;
+}
+
+/* New Visualizations Styles */
+.visualizations {
+  margin-top: 20px;
+}
+
+.visualizations h3 {
+  margin-bottom: 10px;
+}
+
+.visualizations canvas {
+  margin-bottom: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+}
