@@ -6,7 +6,7 @@ import Visualizations from "./Visualizations";
 // Helper function to submit the query using fetch
 const submitQuery = async (query) => {
   try {
-    const response = await fetch("http://localhost:8000/query", {
+    const response = await fetch("project/api/backend/main/query", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
