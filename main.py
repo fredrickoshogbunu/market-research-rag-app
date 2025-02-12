@@ -50,7 +50,7 @@ def read_root():
 @app.get("/favicon.ico")
 def favicon():
     """Return the favicon.ico file."""
-    favicon_path = "path/to/your/favicon.ico"
+    favicon_path = "/favicon.ico"
     if os.path.exists(favicon_path):
         return FileResponse(favicon_path, media_type="image/x-icon", filename="favicon.ico")
     else:
