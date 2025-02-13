@@ -8,20 +8,23 @@
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "build"
+      }
     },
     {
       "src": "api/**/*.py",
       "use": "@vercel/python"
     }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" },
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)", "dest": "/frontend/$1" }
-  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "installCommand": "pnpm install"
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
